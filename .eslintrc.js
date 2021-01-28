@@ -13,13 +13,9 @@ module.exports = {
     "plugin:node/recommended",
   ],
   plugins: ["jest"],
-  settings: {
-    react: {
-      version: "detect",
-    },
-  },
   parserOptions: {
     sourceType: "module",
+    ecmaVersion: 2020,
   },
   env: {
     commonjs: true,
