@@ -1,3 +1,4 @@
+// eslint-disable-next-line node/no-unpublished-require
 const supertest = require("supertest");
 
 const testServer = require("../../utils/tests/db-test-server");

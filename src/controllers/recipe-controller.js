@@ -89,9 +89,13 @@ async function addRecipeComment(req, res, next) {
     .catch(next);
 
   const {
+    // eslint-disable-next-line no-unused-vars
     __v,
+    // eslint-disable-next-line no-unused-vars
     id,
+    // eslint-disable-next-line no-unused-vars
     createdAt,
+    // eslint-disable-next-line no-unused-vars
     updatedAt,
     ...sanitizedComment
   } = comment.toObject();

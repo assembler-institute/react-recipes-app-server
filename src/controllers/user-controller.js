@@ -6,7 +6,7 @@ const generateJWT = require("../utils/auth/generateJWT");
 const getSanitizedUser = require("../utils/auth/getSanitizedUser");
 
 async function signUp(req, res, next) {
-  passport.authenticate("signup", async (error, user, info) => {
+  passport.authenticate("signup", async (error, user) => {
     if (error) {
       return next(error);
     }
@@ -59,7 +59,7 @@ async function signUp(req, res, next) {
 }
 
 async function login(req, res, next) {
-  passport.authenticate("login", async (error, user, info) => {
+  passport.authenticate("login", async (error, user) => {
     if (error) {
       return next(error);
     }

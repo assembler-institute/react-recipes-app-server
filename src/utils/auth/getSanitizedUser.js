@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 function getSanitizedUser(userObj) {
   const {
     __v,

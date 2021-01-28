@@ -1,3 +1,4 @@
+// eslint-disable-next-line node/no-unpublished-require
 const { MongoMemoryServer } = require("mongodb-memory-server");
 const mongoose = require("mongoose");
 const { logger } = require("../../config");
@@ -31,9 +32,9 @@ function setupTestServer() {
       await mongoose.connect(MONGO_URI, MONGO_OPTIONS);
 
       mongoose.connection.on("error", (error) => {
-        if (e.message.code === "ETIMEDOUT") {
+        if (error.message.code === "ETIMEDOUT") {
           logger.debug(error);
-          mongoose.connect(mongoUri, mongooseOpts);
+          mongoose.connect(MONGO_URI, MONGO_OPTIONS);
         }
 
         logger.debug(error);

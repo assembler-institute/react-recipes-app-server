@@ -4,7 +4,6 @@
 module.exports = {
   parser: "babel-eslint",
   extends: [
-    "airbnb",
     "eslint:recommended",
     "plugin:jest/recommended",
     "prettier",
