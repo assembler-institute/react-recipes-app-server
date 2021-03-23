@@ -1,12 +1,12 @@
 {
-  "name": "mern-server",
+  "name": "react-recipes-app-server",
   "version": "1.0.0",
-  "description": "Server app made with React.js and Node.js for the Assembler School MERN Recipes App by @danilucaci.",
+  "description": "",
   "private": true,
-  "author": "Dani Lucaci <danilucaci@gmail.com>",
+  "author": "Dani Lucaci <dani@assemblerschool.com>",
   "repository": {
     "type": "git",
-    "url": "https://github.com/assembler-school/mern-seed-recipes-server.git"
+    "url": "https://github.com/assembler-school/react-recipes-app-server.git"
   },
   "type": "commonjs",
   "keywords": [
