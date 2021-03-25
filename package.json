@@ -1,7 +1,7 @@
 {
   "name": "react-recipes-app-server",
   "version": "1.0.0",
-  "description": "",
+  "description": "Server for the react-recipes-app",
   "private": true,
   "author": "Dani Lucaci <dani@assemblerschool.com>",
   "repository": {
