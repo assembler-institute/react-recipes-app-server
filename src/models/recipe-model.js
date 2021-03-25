@@ -51,6 +51,20 @@ const RecipeSchema = new mongoose.Schema({
       ref: "comment",
     },
   ],
+  votes: {
+    default: {
+      upVotes: 0,
+      downVotes: 0,
+    },
+    upVotes: {
+      type: Number,
+      default: 0,
+    },
+    downVotes: {
+      type: Number,
+      default: 0,
+    },
+  },
 });
 
 const Recipe = mongoose.model("recipe", RecipeSchema);

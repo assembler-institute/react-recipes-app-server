@@ -16,9 +16,21 @@ recipesRouter.post(
 );
 
 recipesRouter.delete(
-  "/recipes/:recipeID/:commentID",
+  "/recipes/:recipeID/comments/:commentID",
   passport.authenticate("jwt", { session: false }),
   recipesController.deleteRecipeComment,
+);
+
+recipesRouter.patch(
+  "/recipes/:recipeID/up-vote",
+  passport.authenticate("jwt", { session: false }),
+  recipesController.upVoteRecipe,
+);
+
+recipesRouter.patch(
+  "/recipes/:recipeID/down-vote",
+  passport.authenticate("jwt", { session: false }),
+  recipesController.downVoteRecipe,
 );
 
 module.exports = recipesRouter;

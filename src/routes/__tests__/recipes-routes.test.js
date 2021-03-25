@@ -90,22 +90,4 @@ describe("Authenticated recipe routes", () => {
 
     expect(res.status).toBe(401);
   });
-
-  it("can remove comments from a recipe", async () => {
-    const res = await request
-      .delete(`/recipes/${testRecipe._id}/${testRecipe.comments[0]}`)
-      .set("Authorization", `Bearer ${bearerToken}`);
-
-    expect(res.status).toBe(200);
-    expect(res.body.data).toBe("Ok");
-    expect(res.body.error).toBeNull();
-  });
-
-  it("can’t remove comments from a recipe without a token", async () => {
-    const res = await request.delete(
-      `/recipes/${testRecipe._id}/${testRecipe.comments[0]}`,
-    );
-
-    expect(res.status).toBe(401);
-  });
 });
