@@ -4,8 +4,8 @@ Server App for the MERN Seed Recipes App.
 
 ## Apps
 
-- [Client App](https://github.com/assembler-school/mern-seed-recipes-client)
-- [Server App](https://github.com/assembler-school/mern-seed-recipes-server)
+- [Client App](https://github.com/assembler-school/react-recipes-app-client)
+- [Server App](https://github.com/assembler-school/react-recipes-app-server)
 
 ## Getting Started
 
@@ -27,10 +27,25 @@ Create an `.env` file in the root of the project with the following entries:
 - `JWT_SECRET`: the secret to sign the jwt secrets
 - `BCRYPT_SALT_ROUNDS`: Used to sign the passwords: number between 10 and 12
 
+Demo `.env` file that you can use:
+
+```env
+// .env
+JWT_SECRET=89dahs89adsh89a8hds89ahds
+BCRYPT_SALT_ROUNDS=10
+MONGO_DB_URL_PRODUCTION=mongodb://localhost:27017/react-recipes-app
+MONGO_DB_URL_DEVELOPMENT=mongodb://localhost:27017/react-recipes-app-dev
+MONGO_DB_URL_TEST=mongodb://localhost:27017/react-recipes-app-test
+PORT=4000
+```
+
 ### Seed the Database
 
 In the `index.js` file of the `server` folder you can find the following methods
 to seed the database.
+
+> But if will have to comment out the following lines after it is first executed
+> otherwise nodemon will re-seed the db each time you make a change.
 
 ```js
 await dropCollections();
